@@ -1,0 +1,144 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Y5sBsoZduD2L5Se-gt-20788945-2021-10-25T22:19:39.81Z::svc.xml</types1:EntryId>
+      <types1:Name>ServiceNow_EndPoint</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:19:40Z</types1:CreationDate>
+      <types1:ModifiedBy>pavankumarsp</types1:ModifiedBy>
+      <types1:ModificationDate>2021-10-25T22:22:52Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="ServiceNow_EndPoint"
+                            label=""
+                            name="ServiceNow_EndPoint"
+                            uuid="37f12112-071b-44c6-8736-cac80c52ad8d">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="getRefreshToken"
+                       maxRedirects="100"
+                       name="getRefreshToken"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="grant_type"
+                                required="true"
+                                testWith="password"
+                                type="string"/>
+                     <parameter name="client_id"
+                                required="true"
+                                testWith="b4ca21d89812fc9084943c9aab311a39"
+                                type="string"/>
+                     <parameter name="client_secret"
+                                required="true"
+                                testWith="YsfU]AJzea"
+                                type="string"/>
+                     <parameter name="username"
+                                required="true"
+                                testWith="informatica.integration"
+                                type="string"/>
+                     <parameter name="password"
+                                required="true"
+                                testWith="vf2LfwzGxc3jDJ4j"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://costcocartstest.service-now.com/oauth_token.do"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Authorization">YjRjYTIxZDg5ODEyZmM5MDg0OTQzYzlhYWIzMTFhMzk6WXNmVV1BSnplYQ==</header>
+                           <header name="Content-Type">application/x-www-form-urlencoded</header>
+                        </httpHeaders>
+                        <body>grant_type=password&amp;amp;client_id=b4ca21d89812fc9084943c9aab311a39&amp;amp;client_secret=YsfU]AJzea&amp;amp;username=informatica.integration&amp;amp;password=vf2LfwzGxc3jDJ4j</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="access_token"
+                            property="access_token"
+                            type="string"/>
+                     <field description=""
+                            name="refresh_token"
+                            property="refresh_token"
+                            type="string"/>
+                     <field description="" name="scope" property="scope" type="string"/>
+                     <field description=""
+                            name="token_type"
+                            property="token_type"
+                            type="string"/>
+                     <field description=""
+                            name="expires_in"
+                            property="expires_in"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="PostResponse"
+                       maxRedirects="100"
+                       name="PostResponse"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="authorization"
+                                nogen="true"
+                                required="true"
+                                testWith="Bearer"
+                                type="string"/>
+                     <parameter name="scan_id"
+                                nogen="true"
+                                required="true"
+                                testWith="46a85d591bb974944680a6c1b24bcb88"
+                                type="string"/>
+                     <parameter name="Final_Response"
+                                nogen="true"
+                                required="true"
+                                testWith="{             &#34;CAMP01US&#34;: [                 {                     &#34;test&#34; : &#34;response from IICS CAI&#34;                 }                              ] }"
+                                type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </parameter>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://costcocartstest.service-now.com/api/x_stwc_cw_intg/informatica/scan_response/{$scan_id}"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Authorization">{$authorization}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{$Final_Response}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>5ToyrxSkEYbkdFseT8KsWp</types1:GUID>
+      <types1:DisplayName>ServiceNow_EndPoint</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:51.662Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

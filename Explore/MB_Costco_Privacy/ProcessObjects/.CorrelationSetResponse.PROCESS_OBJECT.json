@@ -1,0 +1,144 @@
+{
+  "objectInfo" : {
+    "id" : "1GHcEXWK1BGfpeLXbP3dE6",
+    "name" : "CorrelationSetResponse",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Drr0Fdw8jIw8jIw-gt-20791170-2021-10-25T22:21:08.847Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "CorrelationSetResponse",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "8MNKi0EmQu5dteJzmdefEw",
+    "name" : "TRAVEL-attributeMap",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "1L4YNqRi92qBbbe-gt-44964292-2021-10-25T22:21:07.885Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/ProcessObjects"
+  }, {
+    "id" : "5nOvmrwhAnHgPnNF1DjbK7",
+    "name" : "TIRES-attributeMap",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EnPCOkSSHCwkNmu-gt-20791107-2021-10-25T22:21:07.749Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "AttributeMap for Tires",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/ProcessObjects"
+  }, {
+    "id" : "4jRnUp5u9AUbut5P2sregr",
+    "name" : "CP1-attributeMap",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "UeFRqXpIW7WHK80-gt-20791081-2021-10-25T22:21:07.674Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/ProcessObjects"
+  }, {
+    "id" : "0PHRQeRvbBakhAKk7F7UMn",
+    "name" : "FoF-attributeMap",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "APbdutaaabbgdoG-gt-44964254-2021-10-25T22:21:07.643Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/ProcessObjects"
+  }, {
+    "id" : "275ySU9CPR2fuyAdB1ALMT",
+    "name" : "ECOMBC-attributeMap",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0AkRtO3M4WwOC2X-gt-20791089-2021-10-25T22:21:07.699Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "ECOMBC-attributeMap",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/ProcessObjects"
+  }, {
+    "id" : "2BOCk4F4BlnciQBdeNr4UY",
+    "name" : "ECOMBD-attributeMap",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "p2kVNKSmvD4teIs-gt-20791097-2021-10-25T22:21:07.724Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "ECOMBD-attributeMap",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/ProcessObjects"
+  } ]
+}

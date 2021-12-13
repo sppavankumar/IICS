@@ -1,0 +1,45 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>EnPCOkSSHCwkNmu-gt-20791107-2021-10-25T22:21:07.749Z::po.xml</types1:EntryId>
+      <types1:Name>TIRES-attributeMap</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description>AttributeMap for Tires</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:21:08Z</types1:CreationDate>
+      <types1:ModifiedBy>pavankumarsp</types1:ModifiedBy>
+      <types1:ModificationDate>2021-10-25T22:22:14Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="TIRES-attributeMap"
+                        isByCopy="true"
+                        name="TIRES-attributeMap">
+            <description>AttributeMap for Tires</description>
+            <tags/>
+            <detail>
+               <field label="BUSIPK" name="BUSIPK" type="string"/>
+               <field label="CONCATENATED_VALUE" name="CONCATENATED_VALUE" type="string"/>
+               <field label="PERIPK" name="PERIPK" type="string"/>
+               <field label="LKFLCD" name="LKFLCD" type="string"/>
+               <field label="LSTNAM" name="LSTNAM" type="string"/>
+               <field label="CARNBR" name="CARNBR" type="string"/>
+               <field label="LNKIPK" name="LNKIPK" type="string"/>
+               <field label="MSPIPK" name="MSPIPK" type="string"/>
+               <field label="ACCIPK" name="ACCIPK" type="string"/>
+               <field label="BUSNAM" name="BUSNAM" type="string"/>
+               <field label="FRSNAM" name="FRSNAM" type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>5nOvmrwhAnHgPnNF1DjbK7</types1:GUID>
+      <types1:DisplayName>TIRES-attributeMap</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:51.839Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

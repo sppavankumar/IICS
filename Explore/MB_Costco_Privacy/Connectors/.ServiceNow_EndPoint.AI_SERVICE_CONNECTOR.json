@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "5ToyrxSkEYbkdFseT8KsWp",
+    "name" : "ServiceNow_EndPoint",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Y5sBsoZduD2L5Se-gt-20788945-2021-10-25T22:19:39.81Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

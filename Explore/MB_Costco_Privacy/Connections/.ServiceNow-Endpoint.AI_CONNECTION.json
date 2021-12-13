@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "8d1JctH85qlhoWkNXYTx0y",
+    "name" : "ServiceNow-Endpoint",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jlTonQYWeIssjql-gt-20692506-2021-10-25T22:19:40.148Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "5ToyrxSkEYbkdFseT8KsWp",
+    "name" : "ServiceNow_EndPoint",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Y5sBsoZduD2L5Se-gt-20788945-2021-10-25T22:19:39.81Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/Connectors"
+  } ]
+}

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "8MNKi0EmQu5dteJzmdefEw",
+    "name" : "TRAVEL-attributeMap",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "1L4YNqRi92qBbbe-gt-44964292-2021-10-25T22:21:07.885Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

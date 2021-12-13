@@ -1,0 +1,117 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>qzsuQgabcjk91pq-gt-44988571-2021-10-25T22:21:09.227Z::pd.xml</types1:EntryId>
+      <types1:Name>CostcoServiceNowAuth</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:21:09Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="CostcoServiceNowAuth"
+                  name="CostcoServiceNowAuth"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="scan_id" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="error_message" required="true" type="xml">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="process_id" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="authorization" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="process_title" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="true" tracingLevel="terse">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kuz9nj5t" targetId="kuz9nj5s"/>
+               </start>
+               <assignment id="kuz9nj5s">
+                  <title>Process Title Assignment</title>
+                  <operation source="formula" to="temp.process_title">
+                     <expression language="XQuery">ipd:setProcessTitle(fn:concat('Post Error Response to ServiceNow : ',$input.process_id))</expression>
+                  </operation>
+                  <link id="kuz9nj5u" targetId="kuwe49dr"/>
+               </assignment>
+               <assignment id="kuwieesy">
+                  <title>Assignment to authorization</title>
+                  <operation source="formula" to="temp.authorization">
+                     <expression language="XQuery">fn:concat(fn:concat($output.token_type,' '),$output.access_token)</expression>
+                  </operation>
+                  <link id="kuwieet6" targetId="kuwieet5"/>
+               </assignment>
+               <service id="kuwe49dr">
+                  <title>getRefreshToken</title>
+                  <serviceName>ServiceNow-Endpoint:getRefreshToken</serviceName>
+                  <serviceGUID>8d1JctH85qlhoWkNXYTx0y</serviceGUID>
+                  <serviceInput>
+                     <parameter name="grant_type" source="constant">password</parameter>
+                     <parameter name="client_id" source="constant">b4ca21d89812fc9084943c9aab311a39</parameter>
+                     <parameter name="client_secret" source="constant">YsfU]AJzea</parameter>
+                     <parameter name="username" source="constant">informatica.integration</parameter>
+                     <parameter name="password" source="constant">vf2LfwzGxc3jDJ4j</parameter>
+                  </serviceInput>
+                  <link id="kuwieesz" targetId="kuwieesy"/>
+               </service>
+               <service id="kuwieet5">
+                  <title>PostResponse</title>
+                  <serviceName>ServiceNow-Endpoint:PostResponse</serviceName>
+                  <serviceGUID>8d1JctH85qlhoWkNXYTx0y</serviceGUID>
+                  <serviceInput>
+                     <parameter name="authorization" source="field" updatable="true">temp.authorization</parameter>
+                     <parameter name="scan_id" source="field" updatable="true">input.scan_id</parameter>
+                     <parameter name="Final_Response" source="formula">
+                        <expression language="XQuery">$input.error_message </expression>
+                     </parameter>
+                  </serviceInput>
+                  <link id="kuwieet7" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>8kG6mWpJdmthNaYzCSAVAH</types1:GUID>
+      <types1:DisplayName>CostcoServiceNowAuth</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:52.247Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

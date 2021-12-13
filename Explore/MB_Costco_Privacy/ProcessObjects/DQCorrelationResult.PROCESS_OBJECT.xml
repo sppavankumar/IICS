@@ -1,0 +1,66 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>15yDQeH2PKDC0hC-gt-44988583-2021-10-25T22:21:09.284Z::po.xml</types1:EntryId>
+      <types1:Name>DQCorrelationResult</types1:Name>
+      <types1:ParentFlowIds>abdreAFLK2D86Cj-gt-44988620-2021-10-25T22:21:10.015Z::pd.xml,BwZYCSNMzeHbcjq-gt-20694115-2021-10-25T22:21:10.451Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description>This Object Represent query Results from all the data sources</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:21:09Z</types1:CreationDate>
+      <types1:ModifiedBy>pavankumarsp</types1:ModifiedBy>
+      <types1:ModificationDate>2021-10-25T22:22:14Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="DQCorrelationResult"
+                        isByCopy="true"
+                        name="DQCorrelationResult">
+            <description>This Object Represent query Results from all the data sources</description>
+            <tags/>
+            <detail>
+               <field label="DataSource Name" name="DSName" type="string"/>
+               <field label="Query Result" name="Result" type="picklist">
+                  <options>
+                     <option name="values">[{"value":"success","label":"success"},{"value":"fail","label":"fail"}]</option>
+                  </options>
+               </field>
+               <field label="Message" name="message" type="richtextarea"/>
+               <field label="expected" name="expected" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="actual" name="actual" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="CorrelationSetResponse"
+                      name="CorrelationSetResponse"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:CorrelationSetResponse</option>
+                     <option name="guid">1GHcEXWK1BGfpeLXbP3dE6</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="SEARCH_ID" name="SEARCH_ID" type="string"/>
+               <field label="SCAN_ID" name="SCAN_ID" type="string"/>
+               <field label="ProcessId" name="ProcessId" type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>gJ5JdILWtmIcjqSgQlk2kF</types1:GUID>
+      <types1:DisplayName>DQCorrelationResult</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:52.23Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

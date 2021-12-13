@@ -1,0 +1,893 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>BwZYCSNMzeHbcjq-gt-20694115-2021-10-25T22:21:10.451Z::pd.xml</types1:EntryId>
+      <types1:Name>CostcoCorrelationSetProcess</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:21:10Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="CostcoCorrelationSetProcess"
+                  name="CostcoCorrelationSetProcess"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="SEARCH_ID" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="SCAN_ID" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="CorrelationResults" type="objectlist">
+                  <options>
+                     <option name="referenceTo">$po:DQCorrelationResult</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">gJ5JdILWtmIcjqSgQlk2kF</option>
+                  </options>
+               </field>
+               <field description="" name="ProcessStatus" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="InfaId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tmp_dataAccessResponse_CT1" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_dataAccessResponse_FOF" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_dataAccessResponse_TIRES" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="tmp_dataAccessResponse_ECOMBC"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="tmp_dataAccessResponse_ECOMBD"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="tmp_dataAccessResponse_TRAVEL"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="CorrelationResult" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:DQCorrelationResult</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">gJ5JdILWtmIcjqSgQlk2kF</option>
+                  </options>
+               </field>
+               <field description="" name="ProcessTitle" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_DAS_Request_CT1" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService-2:tDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aBJBM4FbXcMkGKCdJtnu60</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_DAS_Request_FOF" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService-2:tDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aBJBM4FbXcMkGKCdJtnu60</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_DAS_Request_TIRES" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService-2:tDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aBJBM4FbXcMkGKCdJtnu60</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_DAS_Request_ECOMBC" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService-2:tDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aBJBM4FbXcMkGKCdJtnu60</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_DAS_Request_ECOMBD" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService-2:tDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aBJBM4FbXcMkGKCdJtnu60</option>
+                  </options>
+               </field>
+               <field description="" name="tmp_DAS_Request_TRAVEL" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService-2:tDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aBJBM4FbXcMkGKCdJtnu60</option>
+                  </options>
+               </field>
+               <field description="" name="ProcessId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="true" tracingLevel="terse">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="krqkvvse" targetId="krqkvvsd"/>
+               </start>
+               <assignment id="krqkvvsd">
+                  <title>Assign_tmp_Das_Request</title>
+                  <operation source="formula" to="temp.ProcessTitle">
+                     <expression language="XQuery">ipd:setProcessTitle(fn:concat($input.SCAN_ID,'_',$input.SEARCH_ID )) </expression>
+                  </operation>
+                  <operation source="constant" to="temp.tmp_DAS_Request_CT1[1]/dataSource">DS2</operation>
+                  <operation source="formula"
+                             to="temp.tmp_DAS_Request_CT1[1]/sqlStatement[1]/statement">
+                     <expression language="XQuery">fn:concat('SELECT * FROM BIGID.BIGID_SAP_IDSOR WHERE CONCAT_CN_FN_LN =', $input.SEARCH_ID )</expression>
+                  </operation>
+                  <operation source="constant" to="temp.tmp_DAS_Request_FOF[1]/dataSource">DS4</operation>
+                  <operation source="formula"
+                             to="temp.tmp_DAS_Request_FOF[1]/sqlStatement[1]/statement">
+                     <expression language="XQuery">fn:concat('SELECT * FROM CCPAODS_FOF.dbo.FOF_ENTITY_SOURCE WHERE CONCATENATED_VALUE =', $input.SEARCH_ID )</expression>
+                  </operation>
+                  <operation source="constant" to="temp.tmp_DAS_Request_TIRES[1]/dataSource">DS5</operation>
+                  <operation source="formula"
+                             to="temp.tmp_DAS_Request_TIRES[1]/sqlStatement[1]/statement">
+                     <expression language="XQuery">fn:concat('SELECT * FROM BIGID.Bigid_ID_Keys WHERE CONCATENATED_VALUE =', $input.SEARCH_ID )</expression>
+                  </operation>
+                  <operation source="constant"
+                             to="temp.tmp_DAS_Request_TIRES[1]/sqlStatement[1]/maxWaitSeconds">12000</operation>
+                  <operation source="constant" to="temp.tmp_DAS_Request_ECOMBC[1]/dataSource">DS6</operation>
+                  <operation source="formula"
+                             to="temp.tmp_DAS_Request_ECOMBC[1]/sqlStatement[1]/statement">
+                     <expression language="XQuery">fn:concat('SELECT EMAIL, USSHOPPERID,  USVALIDATIONKEY,  US_USERS_ID, USCOSTCOMEMBERSHIPNUMBER FROM BC.BIG_ID WHERE EMAIL =', $input.SEARCH_ID )</expression>
+                  </operation>
+                  <operation source="constant" to="temp.tmp_DAS_Request_ECOMBD[1]/dataSource">DS7</operation>
+                  <operation source="formula"
+                             to="temp.tmp_DAS_Request_ECOMBD[1]/sqlStatement[1]/statement">
+                     <expression language="XQuery">fn:concat('SELECT EMAIL, USBDSHOPPERID,  USBDVALIDATIONKEY,  USBD_USERS_ID, USBDCOSTCOMEMBERSHIPNUMBER FROM BD.BIG_ID WHERE EMAIL =', $input.SEARCH_ID )</expression>
+                  </operation>
+                  <operation source="constant" to="temp.tmp_DAS_Request_TRAVEL[1]/dataSource">DS1</operation>
+                  <operation source="formula"
+                             to="temp.tmp_DAS_Request_TRAVEL[1]/sqlStatement[1]/statement">
+                     <expression language="XQuery">fn:concat('SELECT Full_Name, CARNBR, BIGID_ID, Address1, Email, Home_Phone, State FROM dbo.CCPA_Entity WHERE BIGID_ID =', $input.SEARCH_ID )</expression>
+                  </operation>
+                  <operation source="formula" to="temp.ProcessId">
+                     <expression language="XQuery">infa:getProcessId()</expression>
+                  </operation>
+                  <operation source="formula"
+                             to="temp.tmp_DAS_Request_TRAVEL[1]/sqlStatement[1]/maxWaitSeconds">
+                     <expression language="XQuery">120</expression>
+                  </operation>
+                  <link id="ktc8m2dx" targetId="ktc8m2dw"/>
+               </assignment>
+               <assignment id="ktc8m2dw">
+                  <title>Assignment to ProcessStatus, InfaId</title>
+                  <operation source="constant" to="output.ProcessStatus">Your scan request is under process and the reference no is</operation>
+                  <operation source="formula" to="output.InfaId">
+                     <expression language="XQuery">infa:getProcessId()</expression>
+                  </operation>
+                  <link id="ktc8m2dy" targetId="ktc2coq9"/>
+               </assignment>
+               <assignment id="ksyvob92">
+                  <title>Assignment to CorrelationResults</title>
+                  <operation source="formula" to="output.CorrelationResults">
+                     <function name="list:append">
+                        <arg name="dest_field">{$output.CorrelationResults}</arg>
+                        <arg name="new_field">{$temp.CorrelationResult}</arg>
+                     </function>
+                  </operation>
+                  <link id="ksyvob94" targetId="kst4ik4l"/>
+               </assignment>
+               <assignment id="ksyvoba6">
+                  <title>Assignment to CorrelationResults</title>
+                  <operation source="formula" to="output.CorrelationResults">
+                     <function name="list:append">
+                        <arg name="dest_field">{$output.CorrelationResults}</arg>
+                        <arg name="new_field">{$temp.CorrelationResult}</arg>
+                     </function>
+                  </operation>
+                  <link id="ksyvoba8" targetId="ksyvobdl"/>
+               </assignment>
+               <assignment id="ksyvobjg">
+                  <title>Assignment to CorrelationResults</title>
+                  <operation source="formula" to="output.CorrelationResults">
+                     <function name="list:append">
+                        <arg name="dest_field">{$output.CorrelationResults}</arg>
+                        <arg name="new_field">{$temp.CorrelationResult}</arg>
+                     </function>
+                  </operation>
+                  <link id="ksyvobji" targetId="ksz6if3f"/>
+               </assignment>
+               <assignment id="ksz6if6d">
+                  <title>Assignment to CorrelationResults</title>
+                  <operation source="formula" to="output.CorrelationResults">
+                     <function name="list:append">
+                        <arg name="dest_field">{$output.CorrelationResults}</arg>
+                        <arg name="new_field">{$temp.CorrelationResult}</arg>
+                     </function>
+                  </operation>
+                  <link id="ksz6if6f" targetId="ksz6if5u"/>
+               </assignment>
+               <assignment id="ksz6ifb6">
+                  <title>Assignment to CorrelationResults</title>
+                  <operation source="formula" to="output.CorrelationResults">
+                     <function name="list:append">
+                        <arg name="dest_field">{$output.CorrelationResults}</arg>
+                        <arg name="new_field">{$temp.CorrelationResult}</arg>
+                     </function>
+                  </operation>
+                  <link id="ksz6ifb8" targetId="ksz6ifdp"/>
+               </assignment>
+               <assignment id="ksz6ifn1">
+                  <title>Assignment to CorrelationResults</title>
+                  <operation source="formula" to="output.CorrelationResults">
+                     <function name="list:append">
+                        <arg name="dest_field">{$output.CorrelationResults}</arg>
+                        <arg name="new_field">{$temp.CorrelationResult}</arg>
+                     </function>
+                  </operation>
+                  <link id="ktc8m2ml" targetId="kuxu299t"/>
+               </assignment>
+               <milestone id="ktc2coq9">
+                  <title>Send a Synchronous Response to Service-Now</title>
+                  <operation source="formula" to="header.header1">
+                     <expression language="XQuery">$input.SCAN_ID</expression>
+                  </operation>
+                  <operation source="formula" to="header.header2">
+                     <expression language="XQuery">infa:getProcessId()</expression>
+                  </operation>
+                  <operation source="formula" to="header.header3">
+                     <expression language="XQuery">$temp.ProcessId </expression>
+                  </operation>
+                  <link id="ktc2coqb" targetId="kst4ijzc"/>
+               </milestone>
+               <eventContainer id="kst4ijzc">
+                  <service id="krqkvvsk">
+                     <title>query_CT1</title>
+                     <serviceName>execSQLProxy-1</serviceName>
+                     <serviceGUID>k8vs83xwUeBbQSw6kPa3G8</serviceGUID>
+                     <serviceInput>
+                        <parameter name="dataAccessRequest" source="field" updatable="true">temp.tmp_DAS_Request_CT1</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="kst4ijze">
+                     <assignment id="kst4ijzv">
+                        <title>Assignment to tmp_dataAccessResponse_CT1, DataSource Name etc.</title>
+                        <operation source="formula" to="temp.tmp_dataAccessResponse_CT1">
+                           <expression language="XQuery">for $item in $output.dataAccessResponse[1]//*:row 
+return 
+$item</expression>
+                        </operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">CP1</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">success</operation>
+                        <operation source="formula"
+                                   to="temp.CorrelationResult[1]/CorrelationSetResponse[1]/CP1">
+                           <expression language="XQuery">for $item in $output.dataAccessResponse[1]//*:row 
+return
+&lt;CP1&gt;
+&lt;CARD_MEMB_ID&gt;{$item/CARD_MEMB_ID/text()}&lt;/CARD_MEMB_ID&gt;
+&lt;CONCAT_CN_TITLE&gt;{$item/CONCAT_CN_TITLE/text()}&lt;/CONCAT_CN_TITLE&gt;
+&lt;BUT000_PARTNER&gt;{$item/BUT000_PARTNER/text()}&lt;/BUT000_PARTNER&gt;
+&lt;CONCAT_CN_FN_LN&gt;{$item/CONCAT_CN_FN_LN/text()}&lt;/CONCAT_CN_FN_LN&gt;
+&lt;NAME_LAST&gt;{$item/NAME_LAST/text()}&lt;/NAME_LAST&gt;
+&lt;BUT020_PARTNER&gt;{$item/BUT020_PARTNER/text()}&lt;/BUT020_PARTNER&gt;
+&lt;CARD_CARNUM&gt;{$item/CARD_CARNUM/text()}&lt;/CARD_CARNUM&gt;
+&lt;BUT000_PERSNUMBER&gt;{$item/BUT000_PERSNUMBER/text()}&lt;/BUT000_PERSNUMBER&gt;
+&lt;BUT020_ADDRNUMBER&gt;{$item/BUT020_ADDRNUMBER/text()}&lt;/BUT020_ADDRNUMBER&gt;
+&lt;NAME_FIRST&gt;{$item/NAME_FIRST/text()}&lt;/NAME_FIRST&gt;
+&lt;ZZMSH_IPK&gt;{$item/ZZMSH_IPK/text()}&lt;/ZZMSH_IPK&gt;
+&lt;/CP1&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="kst4ijzf" targetId="kst4ijzc" type="containerLink"/>
+                  </flow>
+                  <flow id="kst4ijzh">
+                     <service id="kuz9a8bi">
+                        <title>CostcoServiceNowAuth CT1</title>
+                        <serviceName>CostcoServiceNowAuth</serviceName>
+                        <serviceGUID>8kG6mWpJdmthNaYzCSAVAH</serviceGUID>
+                        <serviceInput>
+                           <parameter name="scan_id" source="field" updatable="true">input.SCAN_ID</parameter>
+                           <parameter name="error_message" source="formula">
+                              <expression language="XQuery">util:toJSON(
+&lt;dsar_fault&gt;
+&lt;scanid&gt;{$input.SCAN_ID}&lt;/scanid&gt;
+&lt;bigid&gt;{$input.SEARCH_ID}&lt;/bigid&gt;
+&lt;error&gt; Informatica process failed at processing data for CT1 database&lt;/error&gt;
+&lt;detail&gt; For more details,Please check CAI console for process id {$temp.ProcessId}&lt;/detail&gt;
+&lt;/dsar_fault&gt;
+)</expression>
+                           </parameter>
+                           <parameter name="process_id" source="field" updatable="true">temp.ProcessId</parameter>
+                        </serviceInput>
+                        <link id="kuz9a8bj" targetId="ksz6ifpx"/>
+                     </service>
+                     <assignment id="ksz6ifpx">
+                        <title>Assignment Fault for CP1</title>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">CP1</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">fail</operation>
+                        <operation source="formula" to="temp.CorrelationResult[1]/message">
+                           <expression language="XQuery">let $code := concat("Code: ",$output.faultInfo[1]/code)
+let $reason := concat("Reason: ",$output.faultInfo[1]/reason)
+let $detail := concat("Detail: ",$output.faultInfo[1]/detail)
+let $messageParts := ($code,$reason,$detail)
+
+return string-join($messageParts, " ")</expression>
+                        </operation>
+                        <link id="ktipuizq" targetId="ktipuizp"/>
+                     </assignment>
+                     <throw id="ktipuizp">
+                        <title>Throw CP1</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="kst4ijzd" targetId="kst4ijze" type="containerLink"/>
+                  <link id="ksyvob93" targetId="ksyvob92"/>
+                  <events>
+                     <catch faultField="faultInfo" id="kst4ijzb" interrupting="true">
+                        <link id="kst4ijzg" targetId="kst4ijzh" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kst4ik4l">
+                  <service id="ks96qbwe">
+                     <title>query_FOF</title>
+                     <serviceName>execSQLProxy-1</serviceName>
+                     <serviceGUID>k8vs83xwUeBbQSw6kPa3G8</serviceGUID>
+                     <serviceInput>
+                        <parameter name="dataAccessRequest" source="field" updatable="true">temp.tmp_DAS_Request_FOF</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="kst4ik4n">
+                     <assignment id="kst4ik4x">
+                        <title>Assignment to tmp_dataAccessResponse_FOF, DataSource Name etc.</title>
+                        <operation source="formula" to="temp.tmp_dataAccessResponse_FOF">
+                           <expression language="XQuery">for $item in $output.dataAccessResponse[1]//*:row 
+return 
+$item</expression>
+                        </operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">FOF</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">success</operation>
+                        <operation source="formula"
+                                   to="temp.CorrelationResult[1]/CorrelationSetResponse[1]/FoF">
+                           <expression language="XQuery">for $recs in $output.dataAccessResponse[1]//*:row 
+return
+&lt;FoF&gt;
+&lt;CONCATENATED_VALUE&gt;{$recs/CONCATENATED_VALUE/text()}&lt;/CONCATENATED_VALUE&gt;
+&lt;MEMBERSHIP_NUM&gt;{$recs/MEMBERSHIP_NUM/text()}&lt;/MEMBERSHIP_NUM&gt;&lt;LNAME&gt;{$recs/LNAME/text()}&lt;/LNAME&gt;
+&lt;EMAIL&gt;{$recs/EMAIL/text()}&lt;/EMAIL&gt;
+&lt;FNAME&gt;{$recs/FNAME/text()}&lt;/FNAME&gt;
+&lt;/FoF&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="kst4ik4o" targetId="kst4ik4l" type="containerLink"/>
+                  </flow>
+                  <flow id="kst4ik4q">
+                     <service id="kuz9a8kv">
+                        <title>CostcoServiceNowAuth FOF</title>
+                        <serviceName>CostcoServiceNowAuth</serviceName>
+                        <serviceGUID>8kG6mWpJdmthNaYzCSAVAH</serviceGUID>
+                        <serviceInput>
+                           <parameter name="scan_id" source="field" updatable="true">input.SCAN_ID</parameter>
+                           <parameter name="error_message" source="formula">
+                              <expression language="XQuery">util:toJSON(
+&lt;dsar_fault&gt;
+&lt;scanid&gt;{$input.SCAN_ID}&lt;/scanid&gt;
+&lt;bigid&gt;{$input.SEARCH_ID}&lt;/bigid&gt;
+&lt;error&gt; Informatica process failed at processing data for FormsOnFire database&lt;/error&gt;
+&lt;detail&gt; For more details,Please check CAI console for processid {$temp.ProcessId}&lt;/detail&gt;
+&lt;/dsar_fault&gt;
+)</expression>
+                           </parameter>
+                           <parameter name="process_id" source="field" updatable="true">temp.ProcessId</parameter>
+                        </serviceInput>
+                        <link id="kuz9a8kw" targetId="ksz6ifvd"/>
+                     </service>
+                     <assignment id="ksz6ifvd">
+                        <title>Assignment Fault for FOF</title>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">FOF</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">fail</operation>
+                        <operation source="formula" to="temp.CorrelationResult[1]/message">
+                           <expression language="XQuery">let $code := concat("Code: ",$output.faultInfo[1]/code)
+let $reason := concat("Reason: ",$output.faultInfo[1]/reason)
+let $detail := concat("Detail: ",$output.faultInfo[1]/detail)
+let $messageParts := ($code,$reason,$detail)
+
+return string-join($messageParts, " ")</expression>
+                        </operation>
+                        <link id="ktjw8wd0" targetId="ktjw8wcz"/>
+                     </assignment>
+                     <throw id="ktjw8wcz">
+                        <title>Throw FoF</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="kst4ik4m" targetId="kst4ik4n" type="containerLink"/>
+                  <link id="ksyvoba7" targetId="ksyvoba6"/>
+                  <events>
+                     <catch faultField="faultInfo" id="kst4ik4k" interrupting="true">
+                        <link id="kst4ik4p" targetId="kst4ik4q" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="ksyvobdl">
+                  <service id="ksoubi48">
+                     <title>query_TIRES</title>
+                     <serviceName>execSQLProxy-1</serviceName>
+                     <serviceGUID>k8vs83xwUeBbQSw6kPa3G8</serviceGUID>
+                     <serviceInput>
+                        <parameter name="dataAccessRequest" source="field" updatable="true">temp.tmp_DAS_Request_TIRES</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="ksyvobdn">
+                     <assignment id="ksyvobem">
+                        <title>Assignment to tmp_dataAccessResponse_TIRES, DataSource Name etc.</title>
+                        <operation source="formula" to="temp.tmp_dataAccessResponse_TIRES">
+                           <expression language="XQuery">for $item in $output.dataAccessResponse[1]//*:row 
+return 
+$item</expression>
+                        </operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">TIRES</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">success</operation>
+                        <operation source="formula"
+                                   to="temp.CorrelationResult[1]/CorrelationSetResponse[1]/TIRES">
+                           <expression language="XQuery">for $recs in $output.dataAccessResponse[1]//*:row 
+return
+&lt;TIRES&gt;
+ &lt;BUSIPK&gt;{$recs/BUSIPK/text()}&lt;/BUSIPK&gt;
+ &lt;CONCATENATED_VALUE&gt;{$recs/CONCATENATED_VALUE/text()}&lt;/CONCATENATED_VALUE&gt;
+ &lt;PERIPK&gt;{$recs/PERIPK/text()}&lt;/PERIPK&gt;
+ &lt;LKFLCD&gt;{$recs/LKFLCD/text()}&lt;/LKFLCD&gt;
+ &lt;LSTNAM&gt;{$recs/LSTNAM/text()}&lt;/LSTNAM&gt;
+ &lt;CARNBR&gt;{$recs/CARNBR/text()}&lt;/CARNBR&gt;
+ &lt;LNKIPK&gt;{$recs/LNKIPK/text()}&lt;/LNKIPK&gt;
+ &lt;MSPIPK&gt;{$recs/MSPIPK/text()}&lt;/MSPIPK&gt;
+ &lt;ACCIPK&gt;{$recs/ACCIPK/text()}&lt;/ACCIPK&gt;
+ &lt;BUSNAM&gt;{$recs/BUSNAM/text()}&lt;/BUSNAM&gt;
+ &lt;FRSNAM&gt;{$recs/FRSNAM/text()}&lt;/FRSNAM&gt;
+&lt;/TIRES&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="ksyvobdo" targetId="ksyvobdl" type="containerLink"/>
+                  </flow>
+                  <flow id="ksyvobdq">
+                     <service id="kuz9a8oi">
+                        <title>CostcoServiceNowAuth Tires</title>
+                        <serviceName>CostcoServiceNowAuth</serviceName>
+                        <serviceGUID>8kG6mWpJdmthNaYzCSAVAH</serviceGUID>
+                        <serviceInput>
+                           <parameter name="scan_id" source="field" updatable="true">input.SCAN_ID</parameter>
+                           <parameter name="error_message" source="formula">
+                              <expression language="XQuery">util:toJSON(
+&lt;dsar_fault&gt;
+&lt;scanid&gt;{$input.SCAN_ID}&lt;/scanid&gt;
+&lt;bigid&gt;{$input.SEARCH_ID}&lt;/bigid&gt;
+&lt;error&gt; Informatica process failed at processing data for TIRES database&lt;/error&gt;
+&lt;detail&gt; For more details,Please check CAI console for processid {$temp.ProcessId}&lt;/detail&gt;
+&lt;/dsar_fault&gt;
+)</expression>
+                           </parameter>
+                           <parameter name="process_id" source="field" updatable="true">temp.ProcessId</parameter>
+                        </serviceInput>
+                        <link id="kuz9a8oj" targetId="ksz6ig0p"/>
+                     </service>
+                     <assignment id="ksz6ig0p">
+                        <title>Assignment to DataSource Name, Query Result etc.</title>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">TIRES</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">fail</operation>
+                        <operation source="formula" to="temp.CorrelationResult[1]/message">
+                           <expression language="XQuery">let $code := concat("Code: ",$output.faultInfo[1]/code)
+let $reason := concat("Reason: ",$output.faultInfo[1]/reason)
+let $detail := concat("Detail: ",$output.faultInfo[1]/detail)
+let $messageParts := ($code,$reason,$detail)
+
+return string-join($messageParts, " ")</expression>
+                        </operation>
+                        <link id="ktjw8wid" targetId="ktjw8wic"/>
+                     </assignment>
+                     <throw id="ktjw8wic">
+                        <title>Throw Tires</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="ksyvobdm" targetId="ksyvobdn" type="containerLink"/>
+                  <link id="ksyvobjh" targetId="ksyvobjg"/>
+                  <events>
+                     <catch faultField="faultInfo" id="ksyvobdk" interrupting="true">
+                        <link id="ksyvobdp" targetId="ksyvobdq" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="ksz6if3f">
+                  <service id="ksrlvv0b">
+                     <title>query_ECOMBC</title>
+                     <serviceName>execSQLProxy-1</serviceName>
+                     <serviceGUID>k8vs83xwUeBbQSw6kPa3G8</serviceGUID>
+                     <serviceInput>
+                        <parameter name="dataAccessRequest" source="field" updatable="true">temp.tmp_DAS_Request_ECOMBC</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="ksz6if3h">
+                     <assignment id="ksz6if3v">
+                        <title>Assignment to tmp_dataAccessResponse_ECOMBC, DataSource Name etc.</title>
+                        <operation source="formula" to="temp.tmp_dataAccessResponse_ECOMBC">
+                           <expression language="XQuery">for $item in $output.dataAccessResponse[1]//*:row 
+return 
+$item</expression>
+                        </operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">ECOMBC</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">success</operation>
+                        <operation source="formula"
+                                   to="temp.CorrelationResult[1]/CorrelationSetResponse[1]/ECOMBC">
+                           <expression language="XQuery">for $recs in $output.dataAccessResponse[1]//*:row 
+return
+&lt;ECOMBC&gt;
+ &lt;USVALIDATIONKEY&gt;{$recs/USVALIDATIONKEY/text()}&lt;/USVALIDATIONKEY&gt;
+ &lt;US_USERS_ID&gt;{$recs/US_USERS_ID/text()}&lt;/US_USERS_ID&gt;
+ &lt;USCOSTCOMEMBERSHIPNUMBER&gt;{$recs/USCOSTCOMEMBERSHIPNUMBER/text()}&lt;/USCOSTCOMEMBERSHIPNUMBER&gt;
+ &lt;EMAIL&gt;{$recs/EMAIL/text()}&lt;/EMAIL&gt;
+ &lt;USSHOPPERID&gt;{$recs/USSHOPPERID/text()}&lt;/USSHOPPERID&gt;
+&lt;/ECOMBC&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="ksz6if3i" targetId="ksz6if3f" type="containerLink"/>
+                  </flow>
+                  <flow id="ksz6if3k">
+                     <service id="kuz9a8sf">
+                        <title>CostcoServiceNowAuth eCom BC v2</title>
+                        <serviceName>CostcoServiceNowAuth</serviceName>
+                        <serviceGUID>8kG6mWpJdmthNaYzCSAVAH</serviceGUID>
+                        <serviceInput>
+                           <parameter name="scan_id" source="field" updatable="true">input.SCAN_ID</parameter>
+                           <parameter name="error_message" source="formula">
+                              <expression language="XQuery">util:toJSON(
+&lt;dsar_fault&gt;
+&lt;scanid&gt;{$input.SCAN_ID}&lt;/scanid&gt;
+&lt;bigid&gt;{$input.SEARCH_ID}&lt;/bigid&gt;
+&lt;error&gt; Informatica process failed at processing data for eCom BC v2 database&lt;/error&gt;
+&lt;detail&gt; For more details,Please check CAI console for processid {$temp.ProcessId}&lt;/detail&gt;
+&lt;/dsar_fault&gt;
+)</expression>
+                           </parameter>
+                           <parameter name="process_id" source="field" updatable="true">temp.ProcessId</parameter>
+                        </serviceInput>
+                        <link id="kuz9a8sg" targetId="ksz6ig5w"/>
+                     </service>
+                     <assignment id="ksz6ig5w">
+                        <title>Assignment Fault for ECOMBC</title>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">ECOMBC</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">fail</operation>
+                        <operation source="formula" to="temp.CorrelationResult[1]/message">
+                           <expression language="XQuery">let $code := concat("Code: ",$output.faultInfo[1]/code)
+let $reason := concat("Reason: ",$output.faultInfo[1]/reason)
+let $detail := concat("Detail: ",$output.faultInfo[1]/detail)
+let $messageParts := ($code,$reason,$detail)
+
+return string-join($messageParts, " ")</expression>
+                        </operation>
+                        <link id="ktjw8wmx" targetId="ktjw8wmw"/>
+                     </assignment>
+                     <throw id="ktjw8wmw">
+                        <title>Throw eComBC</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="ksz6if3g" targetId="ksz6if3h" type="containerLink"/>
+                  <link id="ksz6if6e" targetId="ksz6if6d"/>
+                  <events>
+                     <catch faultField="faultInfo" id="ksz6if3e" interrupting="true">
+                        <link id="ksz6if3j" targetId="ksz6if3k" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="ksz6if5u">
+                  <service id="ksrlvv0u">
+                     <title>query_ECOMBD</title>
+                     <serviceName>execSQLProxy-1</serviceName>
+                     <serviceGUID>k8vs83xwUeBbQSw6kPa3G8</serviceGUID>
+                     <serviceInput>
+                        <parameter name="dataAccessRequest" source="field" updatable="true">temp.tmp_DAS_Request_ECOMBD</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="ksz6if5w">
+                     <assignment id="ksz6if8i">
+                        <title>Assignment to tmp_dataAccessResponse_ECOMBD, DataSource Name etc.</title>
+                        <operation source="formula" to="temp.tmp_dataAccessResponse_ECOMBD">
+                           <expression language="XQuery">for $item in $output.dataAccessResponse[1]//*:row 
+return 
+$item</expression>
+                        </operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">ECOMBD</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">success</operation>
+                        <operation source="formula"
+                                   to="temp.CorrelationResult[1]/CorrelationSetResponse[1]/ECOMBD">
+                           <expression language="XQuery">for $recs in $output.dataAccessResponse[1]//*:row 
+return
+&lt;ECOMBD&gt;
+ &lt;USBDVALIDATIONKEY&gt;{$recs/USBDVALIDATIONKEY/text()}&lt;/USBDVALIDATIONKEY&gt;
+ &lt;USBDCOSTCOMEMBERSHIPNUMBER&gt;{$recs/USBDCOSTCOMEMBERSHIPNUMBER/text()}&lt;/USBDCOSTCOMEMBERSHIPNUMBER&gt;
+ &lt;USBD_USERS_ID&gt;{$recs/USBD_USERS_ID/text()}&lt;/USBD_USERS_ID&gt;
+ &lt;EMAIL&gt;{$recs/EMAIL/text()}&lt;/EMAIL&gt;
+ &lt;USBDSHOPPERID&gt;{$recs/USBDSHOPPERID/text()}&lt;/USBDSHOPPERID&gt;
+&lt;/ECOMBD&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="ksz6if5x" targetId="ksz6if5u" type="containerLink"/>
+                  </flow>
+                  <flow id="ksz6if5z">
+                     <service id="kuz9a8vi">
+                        <title>CostcoServiceNowAuth eCom BD v2</title>
+                        <serviceName>CostcoServiceNowAuth</serviceName>
+                        <serviceGUID>8kG6mWpJdmthNaYzCSAVAH</serviceGUID>
+                        <serviceInput>
+                           <parameter name="scan_id" source="field" updatable="true">input.SCAN_ID</parameter>
+                           <parameter name="error_message" source="formula">
+                              <expression language="XQuery">util:toJSON(
+&lt;dsar_fault&gt;
+&lt;scanid&gt;{$input.SCAN_ID}&lt;/scanid&gt;
+&lt;bigid&gt;{$input.SEARCH_ID}&lt;/bigid&gt;
+&lt;error&gt; Informatica process failed at processing data for eCom BD v2 database&lt;/error&gt;
+&lt;detail&gt; For more details,Please check CAI console for processid {$temp.ProcessId}&lt;/detail&gt;
+&lt;/dsar_fault&gt;
+)</expression>
+                           </parameter>
+                           <parameter name="process_id" source="field" updatable="true">temp.ProcessId</parameter>
+                        </serviceInput>
+                        <link id="kuz9a8vj" targetId="ksz6igb6"/>
+                     </service>
+                     <assignment id="ksz6igb6">
+                        <title>Assignment Fault for ECOMBD</title>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">ECOMBD</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">fail</operation>
+                        <operation source="formula" to="temp.CorrelationResult[1]/message">
+                           <expression language="XQuery">let $code := concat("Code: ",$output.faultInfo[1]/code)
+let $reason := concat("Reason: ",$output.faultInfo[1]/reason)
+let $detail := concat("Detail: ",$output.faultInfo[1]/detail)
+let $messageParts := ($code,$reason,$detail)
+
+return string-join($messageParts, " ")</expression>
+                        </operation>
+                     </assignment>
+                     <link id="ksz6if60" targetId="ksz6if5u" type="containerLink"/>
+                  </flow>
+                  <link id="ksz6if5v" targetId="ksz6if5w" type="containerLink"/>
+                  <link id="ksz6ifb7" targetId="ksz6ifb6"/>
+                  <events>
+                     <catch faultField="faultInfo" id="ksz6if5t" interrupting="true">
+                        <link id="ksz6if5y" targetId="ksz6if5z" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="ksz6ifdp">
+                  <service id="kst4ikfh">
+                     <title>query_TRAVEL</title>
+                     <serviceName>execSQLProxyTravel-1</serviceName>
+                     <serviceGUID>f728xP0ggSNe5CPkWwWaEH</serviceGUID>
+                     <serviceInput>
+                        <parameter name="dataAccessRequest" source="field" updatable="true">temp.tmp_DAS_Request_TRAVEL</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="ksz6ifdr">
+                     <assignment id="ksz6ife9">
+                        <title>Assignment to tmp_dataAccessResponse_TRAVEL, DataSource Name etc.</title>
+                        <operation source="formula" to="temp.tmp_dataAccessResponse_TRAVEL">
+                           <expression language="XQuery">for $item in $output.dataAccessResponse[1]//*:row 
+return 
+$item</expression>
+                        </operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">TRAVEL</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">success</operation>
+                        <operation source="formula"
+                                   to="temp.CorrelationResult[1]/CorrelationSetResponse[1]/TRAVEL">
+                           <expression language="XQuery">for $recs in $output.dataAccessResponse[1]//*:row 
+return
+&lt;TRAVEL&gt;
+ &lt;Full_Name&gt;{$recs/Full_Name/text()}&lt;/Full_Name&gt;
+ &lt;Home_Phone&gt;{$recs/Home_Phone/text()}&lt;/Home_Phone&gt;
+ &lt;Email&gt;{$recs/Email/text()}&lt;/Email&gt;
+ &lt;CARNBR&gt;{$recs/CARNBR/text()}&lt;/CARNBR&gt;
+ &lt;State&gt;{$recs/State/text()}&lt;/State&gt;
+ &lt;Address1&gt;{$recs/Address1/text()}&lt;/Address1&gt;
+ &lt;BIGID_ID&gt;{$recs/BIGID_ID/text()}&lt;/BIGID_ID&gt;
+ &lt;/TRAVEL&gt;</expression>
+                        </operation>
+                        <operation source="field" to="temp.CorrelationResult[1]/SCAN_ID">input.SCAN_ID</operation>
+                        <operation source="field" to="output.CorrelationResults[1]/SEARCH_ID">input.SEARCH_ID</operation>
+                        <operation source="formula" to="temp.CorrelationResult[1]/ProcessId">
+                           <expression language="XQuery">$output.InfaId </expression>
+                        </operation>
+                     </assignment>
+                     <link id="ksz6ifds" targetId="ksz6ifdp" type="containerLink"/>
+                  </flow>
+                  <flow id="ksz6ifdu">
+                     <service id="kuz9a8yb">
+                        <title>CostcoServiceNowAuth Travel</title>
+                        <serviceName>CostcoServiceNowAuth</serviceName>
+                        <serviceGUID>8kG6mWpJdmthNaYzCSAVAH</serviceGUID>
+                        <serviceInput>
+                           <parameter name="scan_id" source="field" updatable="true">input.SCAN_ID</parameter>
+                           <parameter name="error_message" source="formula">
+                              <expression language="XQuery">util:toJSON(
+&lt;dsar_fault&gt;
+&lt;scanid&gt;{$input.SCAN_ID}&lt;/scanid&gt;
+&lt;bigid&gt;{$input.SEARCH_ID}&lt;/bigid&gt;
+&lt;error&gt; Informatica process failed at processing data for TRAVEL database&lt;/error&gt;
+&lt;detail&gt; For more details,Please check CAI console for processid {$temp.ProcessId}&lt;/detail&gt;
+&lt;/dsar_fault&gt;
+)</expression>
+                           </parameter>
+                           <parameter name="process_id" source="field" updatable="true">temp.ProcessId</parameter>
+                        </serviceInput>
+                        <link id="kuz9a8yc" targetId="ksz6iggy"/>
+                     </service>
+                     <assignment id="ksz6iggy">
+                        <title>Assignment to DataSource Name, Query Result etc.</title>
+                        <operation source="constant" to="temp.CorrelationResult[1]/DSName">TRAVEL</operation>
+                        <operation source="constant" to="temp.CorrelationResult[1]/Result">fail</operation>
+                        <operation source="formula" to="temp.CorrelationResult[1]/message">
+                           <expression language="XQuery">let $code := concat("Code: ",$output.faultInfo[1]/code)
+let $reason := concat("Reason: ",$output.faultInfo[1]/reason)
+let $detail := concat("Detail: ",$output.faultInfo[1]/detail)
+let $messageParts := ($code,$reason,$detail)
+
+return string-join($messageParts, " ")</expression>
+                        </operation>
+                        <link id="ktjw8wrh" targetId="ktjw8wrg"/>
+                     </assignment>
+                     <throw id="ktjw8wrg">
+                        <title>Throw Travel</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="ksz6ifdq" targetId="ksz6ifdr" type="containerLink"/>
+                  <link id="ksz6ifn2" targetId="ksz6ifn1"/>
+                  <events>
+                     <catch faultField="faultInfo" id="ksz6ifdo" interrupting="true">
+                        <link id="ksz6ifdt" targetId="ksz6ifdu" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <eventContainer id="kuxu299t">
+                  <subflow id="ktc8m2mk">
+                     <title>CostcoDataSourceProcess</title>
+                     <subflowGUID>0i5qIrw3dodeOrK1NJvlGn</subflowGUID>
+                     <subflowPath>CostcoDataSourceProcess</subflowPath>
+                     <runForEach>false</runForEach>
+                     <input>
+                        <parameter name="inParsePO" source="formula" updatable="true">
+                           <expression language="XQuery">$output.CorrelationResults </expression>
+                        </parameter>
+                     </input>
+                     <outputDef>
+                        <field name="processout" type="objectlist">
+                           <options>
+                              <option name="referenceTo">$po:$any</option>
+                              <option hide="true" name="multiSelect">true</option>
+                              <option name="required">false</option>
+                              <option name="isCopy">true</option>
+                           </options>
+                        </field>
+                     </outputDef>
+                  </subflow>
+                  <flow id="kuxu299v">
+                     <link id="kuxu299w" targetId="kuxu299t" type="containerLink"/>
+                  </flow>
+                  <flow id="kuxu299y">
+                     <throw id="kuxu29ad">
+                        <title>Throw CostcoDataSourceProcess</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="kuxu299u" targetId="kuxu299v" type="containerLink"/>
+                  <link id="ktc8m2mm" targetId="c"/>
+                  <events>
+                     <catch faultField="faultInfo" id="kuxu297b" interrupting="true">
+                        <link id="kuxu299x" targetId="kuxu299y" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>3ogHrBMGYUGcsCl69mtZIL</types1:GUID>
+      <types1:DisplayName>CostcoCorrelationSetProcess</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:52.454Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

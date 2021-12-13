@@ -1,0 +1,76 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Drr0Fdw8jIw8jIw-gt-20791170-2021-10-25T22:21:08.847Z::po.xml</types1:EntryId>
+      <types1:Name>CorrelationSetResponse</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description>CorrelationSetResponse</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:21:09Z</types1:CreationDate>
+      <types1:ModifiedBy>pavankumarsp</types1:ModifiedBy>
+      <types1:ModificationDate>2021-10-25T22:22:14Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="CorrelationSetResponse"
+                        isByCopy="true"
+                        name="CorrelationSetResponse">
+            <description>CorrelationSetResponse</description>
+            <tags/>
+            <detail>
+               <field label="CP1" name="CP1" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:CP1-attributeMap</option>
+                     <option name="guid">4jRnUp5u9AUbut5P2sregr</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="FoF" name="FoF" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:FoF-attributeMap</option>
+                     <option name="guid">0PHRQeRvbBakhAKk7F7UMn</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="TIRES" name="TIRES" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:TIRES-attributeMap</option>
+                     <option name="guid">5nOvmrwhAnHgPnNF1DjbK7</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="ECOMBC" name="ECOMBC" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ECOMBC-attributeMap</option>
+                     <option name="guid">275ySU9CPR2fuyAdB1ALMT</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="ECOMBD" name="ECOMBD" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ECOMBD-attributeMap</option>
+                     <option name="guid">2BOCk4F4BlnciQBdeNr4UY</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="TRAVEL" name="TRAVEL" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:TRAVEL-attributeMap</option>
+                     <option name="guid">8MNKi0EmQu5dteJzmdefEw</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>1GHcEXWK1BGfpeLXbP3dE6</types1:GUID>
+      <types1:DisplayName>CorrelationSetResponse</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:52.162Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

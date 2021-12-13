@@ -1,0 +1,144 @@
+{
+  "objectInfo" : {
+    "id" : "3ogHrBMGYUGcsCl69mtZIL",
+    "name" : "CostcoCorrelationSetProcess",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "BwZYCSNMzeHbcjq-gt-20694115-2021-10-25T22:21:10.451Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "gJ5JdILWtmIcjqSgQlk2kF",
+    "name" : "DQCorrelationResult",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "15yDQeH2PKDC0hC-gt-44988583-2021-10-25T22:21:09.284Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This Object Represent query Results from all the data sources",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/ProcessObjects"
+  }, {
+    "id" : "aBJBM4FbXcMkGKCdJtnu60",
+    "name" : "DataAccessService",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "mXbeMVX3cjk91pq-gt-20692516-2021-10-25T22:19:40.195Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "DO NOT USE THIS SERVICE DIRECTLY is defined only to provide metadata defintions for Automated Steps execSQL and execMultiSQL",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/Connections"
+  }, {
+    "id" : "k8vs83xwUeBbQSw6kPa3G8",
+    "name" : "execSQLProxy",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Pk7HNCnchKGXShO-gt-44964281-2021-10-25T22:21:07.767Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This service allows to Access the execSQL DAS Services running on the Secure Agent from the cloud process or the guide.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/Processes"
+  }, {
+    "id" : "8kG6mWpJdmthNaYzCSAVAH",
+    "name" : "CostcoServiceNowAuth",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "qzsuQgabcjk91pq-gt-44988571-2021-10-25T22:21:09.227Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/BusinessProcesses"
+  }, {
+    "id" : "0i5qIrw3dodeOrK1NJvlGn",
+    "name" : "CostcoDataSourceProcess",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "abdreAFLK2D86Cj-gt-44988620-2021-10-25T22:21:10.015Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Get the response from datasources for memberid in JSON format and sends the response to ServiceNow.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/BusinessProcesses"
+  }, {
+    "id" : "f728xP0ggSNe5CPkWwWaEH",
+    "name" : "execSQLProxyTravel",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "cki8MZgpDqotxGo-gt-44988527-2021-10-25T22:21:08.304Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This service allows to Access the execSQL DAS Services running on the Secure Agent from the cloud process or the guide.",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/MB_Costco_Privacy/Processes"
+  } ]
+}

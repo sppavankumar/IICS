@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "aDqLdNzaNUXevDKpANz9cn",
+    "name" : "MB_Costco_Privacy",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Costco Privacy\n- CCPA",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

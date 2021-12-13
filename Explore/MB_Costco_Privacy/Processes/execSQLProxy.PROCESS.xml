@@ -1,0 +1,148 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Pk7HNCnchKGXShO-gt-44964281-2021-10-25T22:21:07.767Z::pd.xml</types1:EntryId>
+      <types1:Name>execSQLProxy-2</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>This service allows to Access the execSQL DAS Services running on the Secure Agent from the cloud process or the guide.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:Data_Integration,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:21:08Z</types1:CreationDate>
+      <types1:ModifiedBy>pavankumarsp</types1:ModifiedBy>
+      <types1:ModificationDate>2021-10-25T22:23:09Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="execSQLProxy"
+                  name="execSQLProxy-2"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>This service allows to Access the execSQL DAS Services running on the Secure Agent from the cloud process or the guide.</description>
+            <tags>.agent:Data_Integration,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="dataAccessRequest" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService:tDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="dataAccessResponse" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService:tResponse</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>Data_Integration</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="link1" targetId="iveac80q"/>
+               </start>
+               <eventContainer id="iveac80q">
+                  <service id="c">
+                     <title>execSQL</title>
+                     <serviceName>execSQL</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="dataAccessRequest" source="field">input.dataAccessRequest</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="iveac80t">
+                     <assignment id="ivijvknt">
+                        <title>Assignment to dataAccessResponse</title>
+                        <operation source="field" to="output.dataAccessResponse">output.dataAccessResponse</operation>
+                     </assignment>
+                     <link id="iveac80u" targetId="iveac80q" type="containerLink"/>
+                  </flow>
+                  <flow id="iveac80x">
+                     <throw id="iveac81m">
+                        <title>fault</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="iveac80r" targetId="iveac80t" type="containerLink"/>
+                  <link id="ivijvknw" targetId="d"/>
+                  <events>
+                     <catch faultField="faultInfo" id="iveac80o" interrupting="true">
+                        <link id="iveac80v" targetId="iveac80x" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="d"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>18ff0675-9d5f-4928-9994-0ed137159fc1</ns1:Id>
+               <ns1:Name>TestCase1</ns1:Name>
+               <ns1:CreatedBy>pavankumarsp</ns1:CreatedBy>
+               <ns1:CreationDate>2021-10-25T22:21:08Z</ns1:CreationDate>
+               <ns1:ModifiedBy>pavankumarsp</ns1:ModifiedBy>
+               <ns1:ModifiedDate>2021-10-25T22:23:09Z</ns1:ModifiedDate>
+               <ns1:Data format="xml">&lt;root&gt;
+&lt;dataAccessRequest&gt;
+    &lt;sqlStatement&gt;
+       &lt;maxRows&gt;10&lt;/maxRows&gt;
+       &lt;maxWaitSeconds&gt;5&lt;/maxWaitSeconds&gt;
+       &lt;statementId&gt;test_table_select_all&lt;/statementId&gt;
+       &lt;columnCase&gt;unchanged&lt;/columnCase&gt;
+       &lt;includeMetadata&gt;true&lt;/includeMetadata&gt;
+       &lt;hasResultSet&gt;false&lt;/hasResultSet&gt;
+       &lt;statement&gt;SELECT * FROM BIGID.BIGID_SAP_IDSOR where CONCAT_CN_FN_LN = '123456789007_ANDREW_JACKSON'&lt;/statement&gt;
+    &lt;/sqlStatement&gt;
+    &lt;dataSource&gt;DS2&lt;/dataSource&gt;
+&lt;/dataAccessRequest&gt;
+&lt;/root&gt;</ns1:Data>
+            </ns1:SampleData>
+            <ns1:SampleData>
+               <ns1:Id>c658f789-dae5-4547-be3b-adbe15aaac7d</ns1:Id>
+               <ns1:Name>TestCase2</ns1:Name>
+               <ns1:CreatedBy>pavankumarsp</ns1:CreatedBy>
+               <ns1:CreationDate>2021-10-25T22:21:08Z</ns1:CreationDate>
+               <ns1:ModifiedBy>pavankumarsp</ns1:ModifiedBy>
+               <ns1:ModifiedDate>2021-10-25T22:23:09Z</ns1:ModifiedDate>
+               <ns1:Data format="xml">&lt;root&gt;
+&lt;dataAccessRequest&gt;
+    &lt;sqlStatement&gt;
+       &lt;maxRows&gt;10&lt;/maxRows&gt;
+       &lt;maxWaitSeconds&gt;5&lt;/maxWaitSeconds&gt;
+       &lt;statementId&gt;test_table_select_all&lt;/statementId&gt;
+       &lt;columnCase&gt;unchanged&lt;/columnCase&gt;
+       &lt;includeMetadata&gt;true&lt;/includeMetadata&gt;
+       &lt;hasResultSet&gt;false&lt;/hasResultSet&gt;
+       &lt;statement&gt;SELECT Full_Name, CARNBR, BIGID_ID, Address1, Email, Home_Phone, State FROM dbo.CCPA_Entity where BIGID_ID = '123456789007_ANDREW_JACKSON'&lt;/statement&gt;
+    &lt;/sqlStatement&gt;
+    &lt;dataSource&gt;DS2&lt;/dataSource&gt;
+&lt;/dataAccessRequest&gt;
+&lt;/root&gt;</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>k8vs83xwUeBbQSw6kPa3G8</types1:GUID>
+      <types1:DisplayName>execSQLProxy</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:51.714Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

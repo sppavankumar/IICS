@@ -1,0 +1,100 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>WkYNmumf6S3wOLI-gt-20791115-2021-10-25T22:21:07.778Z::pd.xml</types1:EntryId>
+      <types1:Name>execMultiSQLProxyTravel</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>This service allows to Access the execMultiSQL DAS Services running on the Secure Agent from the cloud process or the guide.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:CostcoTravel,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>pavankumarsp</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T22:21:08Z</types1:CreationDate>
+      <types1:ModifiedBy>pavankumarsp</types1:ModifiedBy>
+      <types1:ModificationDate>2021-10-25T22:23:09Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="execMultiSQLProxyTravel"
+                  name="execMultiSQLProxyTravel"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>This service allows to Access the execMultiSQL DAS Services running on the Secure Agent from the cloud process or the guide.</description>
+            <tags>.agent:CostcoTravel,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="multiDataAccessrequest" type="reference">
+                  <options>
+                     <option name="referenceTo">DataAccessService:tMultiDataAccessRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="multiDataAccessResponse" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="true" tracingLevel="terse">
+               <targetLocation>CostcoTravel</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="link1" targetId="ivijk40j"/>
+               </start>
+               <eventContainer id="ivijk40j">
+                  <service id="c">
+                     <title>execMultiSQL</title>
+                     <serviceName>execMultiSQL</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="multiDataAccessRequest" source="field">input.multiDataAccessrequest</parameter>
+                     </serviceInput>
+                  </service>
+                  <flow id="ivijk40m">
+                     <assignment id="ivijuo3u">
+                        <title>Assignment to multiDataAccessResponse</title>
+                        <operation source="field" to="output.multiDataAccessResponse">output.multiDataAccessResponse</operation>
+                     </assignment>
+                     <link id="ivijk40n" targetId="ivijk40j" type="containerLink"/>
+                  </flow>
+                  <flow id="ivijk40q">
+                     <throw id="ivijsoca">
+                        <title>Untitled</title>
+                        <throwInput>
+                           <parameter name="code" source="field" updatable="true">output.faultInfo[1]/code</parameter>
+                           <parameter name="detail" source="field" updatable="true">output.faultInfo[1]/detail</parameter>
+                           <parameter name="reason" source="field" updatable="true">output.faultInfo[1]/reason</parameter>
+                        </throwInput>
+                     </throw>
+                  </flow>
+                  <link id="ivijk40k" targetId="ivijk40m" type="containerLink"/>
+                  <link id="ivijuo3x" targetId="d"/>
+                  <events>
+                     <catch faultField="faultInfo" id="ivijk40f" interrupting="true">
+                        <link id="ivijk40o" targetId="ivijk40q" type="containerLink"/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <end id="d"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>59g9rPowXoCbckPLZV31GW</types1:GUID>
+      <types1:DisplayName>execMultiSQLProxyTravel</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-12-13T05:11:51.946Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
